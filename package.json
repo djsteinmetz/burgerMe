@@ -1,0 +1,33 @@
+{
+  "name": "burgerme",
+  "version": "1.0.0",
+  "description": "BurgerMe is a restaurant app that lets users input the names of burgers they'd like to eat, and subsequently 'devour' them. This application utilizes MySQL, Node, Express, Handlebars and a homemade ORM.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djsteinmetz/burgerMe.git"
+  },
+  "keywords": [
+    "mysql",
+    "node",
+    "express",
+    "javascript",
+    "handlebars",
+    "orm"
+  ],
+  "author": "Dj Steinmetz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djsteinmetz/burgerMe/issues"
+  },
+  "homepage": "https://github.com/djsteinmetz/burgerMe#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.16.0"
+  }
+}
