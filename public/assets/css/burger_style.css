@@ -1,0 +1,54 @@
+.container {
+    margin-bottom: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+i {
+    font-size: 18px;
+}
+
+#jumbotron1 {
+    padding-top: 100px;
+}
+
+.jumbotron {
+    background-color: rgb(233, 236, 239, 0.6)
+}
+
+#burgerMe {
+    position: relative;
+    /* z-index: 500; */
+    vertical-align: top;
+    font-size: 6em;
+    font-family: 'Francois One', sans-serif;
+    margin-top: -15px;
+}
+
+.burger {
+    position: relative;
+    width: 10%;
+    margin-top: -225px;
+    z-index: 1;
+}
+
+.fa-hands {
+    position: relative;
+    display: block;
+    font-size: 7.5rem;
+    color: rgb(251, 208, 67);
+    margin-top: -55px;
+    z-index: 10;
+}
+
+.btn-primary {
+    background-color: rgb(71, 104, 173);
+    border-color: rgb(71, 104, 173);
+}

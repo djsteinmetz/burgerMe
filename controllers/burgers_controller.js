@@ -1,64 +1,30 @@
-const express = require("express");
-const burger = require("../models/burger");
-module.exports = function (app) {
-    // Use Handlebars to render the main index.html page with the todos in it.
-    app.get("/", function (req, res) {
-        orm.selectAll();
+var express = require("express");
+var router = express.Router();
+// Import the model (burger.js) to use it's database functions.
+var burger = require("../models/burger");
+
+// Use Handlebars to render the main index.html page with the todos in it.
+router.get("/", function (req, res) {
+    burger.all(function(data) {
+        var hbsObj = {
+            burgers: data
+        };
+        console.log("OBJECT: ", hbsObj);
+        res.render("index", hbsObj);
     });
+});
 
-    // // Create a new todo
-    // app.post("/todos", function (req, res) {
-    //     connection.query("INSERT INTO plans (plan) VALUES (?)", [req.body.plan], function (err, result) {
-    //         if (err) {
-    //             return res.status(500).end();
-    //         }
+router.delete("/api/burgers/:id", function(req, res) {
+    var condition = "id = " + req.params.id;
+    console.log("condition: ", condition);
 
-    //         // Send back the ID of the new todo
-    //         res.json({ id: result.insertId });
-    //         console.log({ id: result.insertId });
-    //     });
-    // });
+    burgers.delete(condition, function(result) {
+        if(result.affectedRows == 0) {
+            return res.status(404).end();
+        } else {
+            return res.status(200).end();
+        };
+    });
+});
 
-    // // Retrieve all todos
-    // app.get("/todos", function (req, res) {
-    //     connection.query("SELECT * FROM plans;", function (err, data) {
-    //         if (err) {
-    //             return res.status(500).end();
-    //         }
-
-    //         res.json(data);
-    //     });
-    // });
-
-    // // Update a todo
-    // app.put("/todos/:id", function (req, res) {
-    //     connection.query("UPDATE plans SET plan = ? WHERE id = ?", [req.body.plan, req.params.id], function (err, result) {
-    //         if (err) {
-    //             // If an error occurred, send a generic server failure
-    //             return res.status(500).end();
-    //         }
-    //         else if (result.changedRows === 0) {
-    //             // If no rows were changed, then the ID must not exist, so 404
-    //             return res.status(404).end();
-    //         }
-    //         res.status(200).end();
-
-    //     });
-    // });
-
-    // // Delete a todo
-    // app.delete("/todos/:id", function (req, res) {
-    //     connection.query("DELETE FROM plans WHERE id = ?", [req.params.id], function (err, result) {
-    //         if (err) {
-    //             // If an error occurred, send a generic server failure
-    //             return res.status(500).end();
-    //         }
-    //         else if (result.affectedRows === 0) {
-    //             // If no rows were changed, then the ID must not exist, so 404
-    //             return res.status(404).end();
-    //         }
-    //         res.status(200).end();
-
-    //     });
-    // });
-}
+module.exports = router;
