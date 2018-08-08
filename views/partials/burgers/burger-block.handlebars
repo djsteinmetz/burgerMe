@@ -1,4 +1,6 @@
 <p>
-	{{burger_name}}
+	{{burger_name}}: 
+	{{#unless devoured}} Ready to eat! {{/unless}}
+	{{#if devoured}} Devoured! {{/if}}
 	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
 </p>

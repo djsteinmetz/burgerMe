@@ -16,7 +16,7 @@ i {
 }
 
 #jumbotron1 {
-    padding-top: 100px;
+    padding: 100px 0px 0px 0px;
 }
 
 .jumbotron {
@@ -25,17 +25,17 @@ i {
 
 #burgerMe {
     position: relative;
-    /* z-index: 500; */
+    z-index: 500;
     vertical-align: top;
-    font-size: 6em;
+    font-size: 5em;
     font-family: 'Francois One', sans-serif;
-    margin-top: -15px;
+    margin-top: -30px;
 }
 
 .burger {
     position: relative;
-    width: 10%;
-    margin-top: -225px;
+    width: 151.2px;
+    opacity: 0.8;
     z-index: 1;
 }
 
@@ -43,8 +43,8 @@ i {
     position: relative;
     display: block;
     font-size: 7.5rem;
-    color: rgb(251, 208, 67);
-    margin-top: -55px;
+    color: rgb(251, 208, 67 );
+    margin-top: -90px;
     z-index: 10;
 }
 

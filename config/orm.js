@@ -50,12 +50,25 @@ var orm = {
                 // res.render("index", { plans: data });
             });
     },
-    insertOne: function () {
+    create: function (table, cols, vals, cb) {
+        var queryString = "INSERT INTO " + table;
+        queryString += "(";
+        queryString += cols.toString();
+        queryString += ") ";
+        queryString += "VALUES (";
+        queryString += printQuestionMarks(vals.length);
+        queryString += ") ";
 
-    },
-    updateOne: function () {
+        console.log(queryString);
 
+        connection.query(queryString, vals, function(err, result) {
+            if(err) throw err;
+            cb(result);
+        })
     },
+    // update: function (objColVals, condition, cb) {
+
+    // },
     delete: function (table, condition, cb) {
         var queryString = "DELETE FROM " + table;
         queryString += " WHERE " + condition;
