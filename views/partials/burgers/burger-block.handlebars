@@ -3,4 +3,7 @@
 	{{#unless devoured}} Ready to eat! {{/unless}}
 	{{#if devoured}} Devoured! {{/if}}
 	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+	{{#unless devoured}}
+		<button class="devour-burger" data-id="{{this.id}}">DEVOUR IT!</button>
+	{{/unless}}
 </p>
