@@ -52,3 +52,7 @@ i {
     background-color: rgb(71, 104, 173);
     border-color: rgb(71, 104, 173);
 }
+
+.fa-hand-point-right {
+    font-size: 2rem;
+}
