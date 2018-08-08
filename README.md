@@ -9,13 +9,12 @@ $ node (or nodemon) server
 ```
 
 ## Technology
+* Javascript & jQuery
 * Node.js
-* Javascript
 * Express.js
-* Heroku
-* Animate.css
 * Handlebars.js
 * MySQL
+* Heroku
 
 <img width="1322" alt="screen shot 2018-08-07 at 10 51 55 pm" src="https://user-images.githubusercontent.com/38231097/43815288-9c59f05a-9a94-11e8-8fac-48287bce0ddf.png">
 
