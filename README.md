@@ -15,12 +15,8 @@ $ node (or nodemon) server
 * Handlebars.js
 * MySQL
 * Heroku
-## Stage One
 
-<img width="1322" alt="screen shot 2018-08-07 at 10 51 55 pm" src="https://user-images.githubusercontent.com/38231097/43815288-9c59f05a-9a94-11e8-8fac-48287bce0ddf.png">
-
-## Stage Two
-
-<img width="1351" alt="screen shot 2018-08-08 at 6 26 52 pm" src="https://user-images.githubusercontent.com/38231097/43869554-c69048de-9b38-11e8-9e59-ccbe8cf05d6d.png">
+## Demonstration
+![burgerme](https://user-images.githubusercontent.com/38231097/43935693-c0d399f4-9c1a-11e8-8ce5-7580cb4cb1d5.gif)
 
 
