@@ -1,10 +1,10 @@
-<p>
-	<i class="far fa-hand-point-right"></i> {{burger_name}}: 
-	{{#unless devoured}} Ready to eat! {{/unless}}
-	{{#if devoured}} Devoured! {{/if}}
+<p> 
 	{{#unless devoured}}
 		<i class="devour-burger fas fa-utensils" data-id="{{this.id}}"></i>
 	{{/unless}}
-	
+
 	<i class="delete-burger fas fa-trash-alt" data-id="{{this.id}}"></i>
+	{{burger_name}}:
+	{{#unless devoured}} Ready to eat! {{/unless}}
+	{{#if devoured}} Devoured! {{/if}}
 </p>
