@@ -3,7 +3,7 @@ BurgerMe is a restaurant app that lets users input the names of burgers they'd l
 
 ## Installation
 ```
-$ git clone https://github.com/djsteinmetz/friendFinder.git
+$ git clone https://github.com/djsteinmetz/burgerMe.git
 $ npm install
 $ node (or nodemon) server
 ```
